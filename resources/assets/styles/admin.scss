@@ -1,0 +1,64 @@
+// Sass Imports
+@import "common/variables";
+@import "~materialize-css/sass/components/mixins";
+@import "~materialize-css/sass/components/color";
+@import "~materialize-css/sass/components/normalize";
+@import "~materialize-css/sass/components/variables";
+@import "~materialize-css/sass/components/global";
+@import "~materialize-css/sass/components/roboto";
+@import "~materialize-css/sass/components/typography";
+@import "~materialize-css/sass/components/grid";
+@import "~materialize-css/sass/components/cards";
+@import "components/patterns";
+// Css to be run in admin
+
+.grid-item {
+  width: 300px;
+}
+
+.grid-item--width2 {
+  width: 600px;
+}
+
+.iris-picker {
+  z-index: 9;
+}
+
+.dynamic-color .red,
+.dynamic-color .pink,
+.dynamic-color .purple,
+.dynamic-color .deep-purple,
+.dynamic-color .indigo,
+.dynamic-color .blue,
+.dynamic-color .light-blue,
+.dynamic-color .cyan,
+.dynamic-color .teal,
+.dynamic-color .green,
+.dynamic-color .light-green,
+.dynamic-color .lime,
+.dynamic-color .yellow,
+.dynamic-color .amber,
+.dynamic-color .orange,
+.dynamic-color .deep-orange,
+.dynamic-color .brown,
+.dynamic-color .grey,
+.dynamic-color .blue-grey,
+.dynamic-color .black,
+.dynamic-color .white,
+.dynamic-color .transparent {
+  height: 55px;
+  width: 100%;
+  padding: 0 15px;
+  line-height: 55px;
+  font-weight: 500;
+  font-size: 12px;
+  display: block;
+  box-sizing: border-box;
+}
+
+h2,
+h3 {
+  color: #23282d;
+  font-size: 1.3em;
+  margin: 1em 0;
+}

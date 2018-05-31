@@ -1,0 +1,334 @@
+
+
+$progress: $primary-color;
+$track-color: lighten($primary-color, 30%);
+$thumb-color: darken($primary-color, 10%);
+
+$track-width: 100%;
+$track-height: 7px;
+
+.audio-player {
+  position: relative;
+  margin: 0.5rem 0 1rem;
+  background-color: #fff;
+  -webkit-transition: -webkit-box-shadow 0.25s;
+  -o-transition: box-shadow 0.25s;
+  transition: box-shadow 0.25s, -webkit-box-shadow 0.25s;
+  border-radius: 2px;
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+
+  .audio-position {
+    margin: 0;
+    height: $track-height * 2;
+
+    > .thumb {
+      margin-left: -8px !important;
+      margin-top: -14px !important;
+    }
+  }
+
+  input[type=range] {
+    -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+    width: 100%; /* Specific width is required for Firefox. */
+    background: transparent; /* Otherwise white in Chrome */
+    margin: 0;
+    border: none;
+    align-items: center;
+    appearance: none;
+    display: flex;
+    height: $track-height;
+
+    &:focus {
+      box-shadow: none;
+      outline: none;
+    }
+
+    &::-webkit-slider-runnable-track {
+      cursor: pointer;
+      -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+      width: 100%; /* Specific width is required for Firefox. */
+      background: $track-color; /* Otherwise white in Chrome */
+      border-color: transparent;
+      height: $track-height;
+    }
+
+    &::-webkit-slider-thumb {
+      margin-top: -4px;
+    }
+
+    &::-moz-range-track {
+      cursor: pointer;
+      background: $track-color;
+      border-color: transparent;
+      color: transparent;
+      height: $track-height;
+    }
+
+    &::-moz-range-progress {
+      background: $progress;
+      border: 0;
+      height: $track-height;
+    }
+
+    &::-ms-track {
+      width: 100%;
+      cursor: pointer;
+
+      /* Hides the slider so custom styles can be added */
+      background: transparent;
+      border-color: transparent;
+      color: transparent;
+      height: $track-height;
+    }
+
+    &::-ms-fill-lower {
+      background: $track-color;
+      border-radius: 0;
+    }
+
+    &::-ms-fill-upper {
+      background: $progress;
+      border-radius: 0;
+    }
+  }
+
+  .disabled {
+    pointer-events: none;
+    background-color: lighten($secondary-color, 44%) !important;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    color: #9f9f9f !important;
+    cursor: default;
+  }
+
+  .oscilloscope {
+    width: 520px;
+    height: 50px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+  }
+
+  .frequency-bars {
+    width: 520px;
+    height: 50px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+  }
+
+  .audio-info {
+    width: 520px;
+    height: 50px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+  }
+
+  .volume {
+    display: inline;
+
+    > .dropdown-content {
+      display: none;
+      position: absolute;
+      width: 250px;
+      z-index: 9;
+      margin-left: 7px;
+
+      > li {
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 20px;
+
+        > div > .thumb {
+          display: none;
+        }
+      }
+    }
+
+    > .active {
+      display: inline-block;
+      opacity: 1;
+    }
+  }
+
+  .audio-playlist {
+    img {
+      max-width: 120px;
+    }
+  }
+}
+
+.audio-center {
+  position: relative;
+  margin: 0.5rem 0 1rem;
+  background-color: #fff;
+  -webkit-transition: -webkit-box-shadow 0.25s;
+  -o-transition: box-shadow 0.25s;
+  transition: box-shadow 0.25s, -webkit-box-shadow 0.25s;
+  border-radius: 2px;
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+
+  .audio-position {
+    margin: 50px 50px 20px 30px;
+    height: $track-height * 2;
+
+    > .thumb {
+      margin-left: -8px !important;
+      margin-top: -14px !important;
+      display: none !important;
+    }
+  }
+
+  .audio-center-actions {
+    width: 240px;
+    margin: 0 auto;
+  }
+
+  .audio-cover {
+    border-top-left-radius: 2px;
+
+    .carousel {
+      .carousel-item {
+        img {
+          border-radius: 2px;
+        }
+      }
+    }
+  }
+
+  input[type=range] {
+    -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+    width: 100%; /* Specific width is required for Firefox. */
+    background: transparent; /* Otherwise white in Chrome */
+    margin: 0;
+    border: none;
+    align-items: center;
+    appearance: none;
+    display: flex;
+    height: $track-height;
+
+    &:focus {
+      box-shadow: none;
+      outline: none;
+    }
+
+    &::-webkit-slider-runnable-track {
+      cursor: pointer;
+      -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+      width: 100%; /* Specific width is required for Firefox. */
+      background: $track-color; /* Otherwise white in Chrome */
+      border-color: transparent;
+      height: $track-height;
+    }
+
+    &::-webkit-slider-thumb {
+      margin-top: -4px;
+    }
+
+    &::-moz-range-track {
+      cursor: pointer;
+      background: $track-color;
+      border-color: transparent;
+      color: transparent;
+      height: $track-height;
+    }
+
+    &::-moz-range-progress {
+      background: $progress;
+      border: 0;
+      height: $track-height;
+    }
+
+    &::-ms-track {
+      width: 100%;
+      cursor: pointer;
+
+      /* Hides the slider so custom styles can be added */
+      background: transparent;
+      border-color: transparent;
+      color: transparent;
+      height: $track-height;
+    }
+
+    &::-ms-fill-lower {
+      background: $track-color;
+      border-radius: 0;
+    }
+
+    &::-ms-fill-upper {
+      background: $progress;
+      border-radius: 0;
+    }
+  }
+
+  table.bordered {
+    border-top: 1px solid #d0d0d0;
+  }
+
+  .disabled {
+    pointer-events: none;
+    background-color: lighten($secondary-color, 44%) !important;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    color: #9f9f9f !important;
+    cursor: default;
+  }
+
+  .audio-player-controls {
+    float: right;
+    width: 100%;
+  }
+
+  .audio-player-content {
+    margin-top: 10px;
+    margin-right: 10px;
+
+    .oscilloscope {
+      width: 520px;
+      height: 80px;
+    }
+
+    .frequency-bars {
+      width: 520px;
+      height: 80px;
+    }
+
+    .audio-info {
+      width: 520px;
+      height: 80px;
+    }
+  }
+
+  .volume {
+    display: inline;
+
+    > .dropdown-content {
+      display: none;
+      position: absolute;
+      width: 250px;
+      z-index: 9;
+      margin-left: 7px;
+
+      > li {
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 20px;
+
+        > div > .thumb {
+          display: none;
+        }
+      }
+    }
+
+    > .active {
+      display: inline-block;
+      opacity: 1;
+    }
+  }
+
+  .audio-playlist {
+    img {
+      max-width: 120px;
+    }
+  }
+}

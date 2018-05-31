@@ -1,0 +1,105 @@
+// Css for demo and documentation
+.promo {
+  > i {
+    margin: 40px 0;
+    color: $secondary-color;
+    font-size: 7rem;
+    display: block;
+  }
+}
+
+.grid-example {
+  border: 1px solid #eee;
+  margin: 7px 0;
+  text-align: center;
+  line-height: 50px;
+  font-size: 28px;
+  background-color: $secondary-color;
+  color: white;
+  padding: 0;
+}
+
+.shadow-demo {
+  background-color: $secondary-color;
+  width: 100px;
+  height: 100px;
+  margin: 20px auto;
+}
+
+.header {
+  color: $heading-color;
+  font-weight: 300;
+}
+
+pre {
+  max-height: 30em;
+  overflow: auto;
+}
+
+.icon-container {
+  > .icon-preview {
+    height: 120px;
+    text-align: center;
+
+    > i {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+
+    > span {
+      display: block;
+    }
+  }
+}
+
+.dynamic-color .red,
+.dynamic-color .pink,
+.dynamic-color .purple,
+.dynamic-color .deep-purple,
+.dynamic-color .indigo,
+.dynamic-color .blue,
+.dynamic-color .light-blue,
+.dynamic-color .cyan,
+.dynamic-color .teal,
+.dynamic-color .green,
+.dynamic-color .light-green,
+.dynamic-color .lime,
+.dynamic-color .yellow,
+.dynamic-color .amber,
+.dynamic-color .orange,
+.dynamic-color .deep-orange,
+.dynamic-color .brown,
+.dynamic-color .grey,
+.dynamic-color .blue-grey,
+.dynamic-color .black,
+.dynamic-color .white,
+.dynamic-color .transparent {
+  height: 55px;
+  width: 100%;
+  padding: 0 15px;
+  line-height: 55px;
+  font-weight: 500;
+  font-size: 12px;
+  display: block;
+  box-sizing: border-box;
+}
+
+h5 {
+  > span {
+    font-size: 14px;
+    margin-left: 15px;
+    color: #777;
+  }
+}
+
+.waves-color-demo .btn:not(.waves-light),
+.waves-color-demo .btn-large:not(.waves-light) {
+  background-color: #fff;
+  color: #212121;
+}
+
+.waves-color-demo .collection-item {
+  height: 37px;
+  line-height: 37px;
+  box-sizing: content-box;
+}

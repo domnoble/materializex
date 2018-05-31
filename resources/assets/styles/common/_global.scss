@@ -1,0 +1,67 @@
+// Base styles
+.primary-color-bg {
+  background-color: $primary-color;
+}
+
+.block {
+  height: 100%;
+}
+
+.wrap {
+  flex: 1 0 auto;
+}
+
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  white-space: nowrap;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+.grid-item {
+  width: 300px !important;
+  margin: 10px;
+}
+
+.grid-item--width2 {
+  width: 620px !important;
+}
+
+.pgrid-item {
+  width: 180px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.pgrid-item--width2 {
+  width: 360px;
+}
+
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+}
+
+// Class for when element is above threshold
+.pin-top {
+  position: relative;
+}
+
+// Class for when element is below threshold
+.pin-bottom {
+  position: relative;
+}
+
+// Class for when element is pinned
+.pinned {
+  position: fixed !important;
+}
+
+.pushpin .block {
+  min-height: 1000px;
+}

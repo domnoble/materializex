@@ -1,0 +1,75 @@
+/*
+  Player Skin Designer for Video.js
+  http://videojs.com
+
+  To customize the player skin edit
+  the CSS below. Click "details"
+  below to add comments or questions.
+  This file uses some SCSS. Learn more
+  at http://sass-lang.com/guide)
+
+  This designer can be linked to at:
+  https://codepen.io/heff/pen/EarCt/left/?editors=010
+*/
+
+$primary-foreground-color: #fff;
+$primary-background-color: $primary-color-dark;
+$center-big-play-button: true; // true default
+
+.video-js {
+  font-size: 1rem;
+  color: $primary-foreground-color;
+}
+
+.vjs-default-skin .vjs-big-play-button {
+  font-size: 3em;
+  $big-play-width: 3em;
+  $big-play-height: 1.5em;
+
+  line-height: $big-play-height;
+  height: $big-play-height;
+  width: $big-play-width;
+  border: 0.06666em solid $primary-foreground-color;
+  border-radius: 0.3em;
+  left: 50%;
+  top: 50%;
+  margin-left: -($big-play-width / 2);
+  margin-top: -($big-play-height / 2);
+}
+
+.video-js .vjs-control-bar,
+.video-js .vjs-big-play-button,
+.video-js .vjs-menu-button .vjs-menu-content {
+  background-color: $primary-background-color;
+  background-color: rgba($primary-background-color, 0.7);
+}
+
+$slider-bg-color: lighten($primary-background-color, 33%);
+
+.video-js .vjs-slider {
+  background-color: $slider-bg-color;
+  background-color: rgba($slider-bg-color, 0.5);
+}
+
+.video-js .vjs-volume-level,
+.video-js .vjs-play-progress,
+.video-js .vjs-slider-bar {
+  background: $primary-foreground-color;
+}
+
+.video-js .vjs-load-progress {
+  background: lighten($slider-bg-color, 25%);
+  background: rgba($slider-bg-color, 0.5);
+}
+
+.video-js .vjs-load-progress div {
+  background: lighten($slider-bg-color, 50%);
+  background: rgba($slider-bg-color, 0.75);
+}
+
+.video-js .vjs-control-bar {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}

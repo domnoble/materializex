@@ -1,0 +1,22 @@
+// Header
+header {
+  .container {
+    min-height: 200px;
+  }
+
+  .logo {
+    max-width: 200px;
+  }
+
+  .brand {
+    margin-top: 20px;
+
+    h1 {
+      margin: 0;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+}

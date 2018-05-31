@@ -1,0 +1,38 @@
+// Alerts
+.alert {
+  padding: 19px 14px;
+  margin: 0.5rem 0 1rem;
+  -webkit-transition: -webkit-box-shadow 0.25s;
+  -o-transition: box-shadow 0.25s;
+  transition: box-shadow 0.25s;
+  border-radius: 2px;
+
+  > i {
+    position: relative;
+    top: -5px;
+  }
+
+  > .material-icons {
+    top: 2px;
+  }
+}
+
+.alert-info {
+  background-color: $info-color;
+  color: darken($info-color, 33%);
+}
+
+.alert-success {
+  background-color: $success-color;
+  color: darken($success-color, 33%);
+}
+
+.alert-warning {
+  background-color: $warning-color;
+  color: darken($warning-color, 33%);
+}
+
+.alert-error {
+  background-color: $error-color;
+  color: darken($error-color, 33%);
+}

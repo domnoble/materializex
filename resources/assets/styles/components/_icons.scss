@@ -1,0 +1,135 @@
+@font-face {
+  font-family: "MaterializeX Media Icons";
+  src: url("../fonts/matx-icons.eot");
+  src:
+    url("../fonts/matx-icons.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/matx-icons.woff") format("woff"),
+    url("../fonts/matx-icons.ttf") format("truetype"),
+    url("../fonts/matx-icons.svg#matx-icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: "matxi-Media-Icons";
+    src: url("../fonts/matx-icons.svg#matx-icons") format("svg");
+  }
+}
+
+[class^="matxi-"]::before,
+[class*="matxi-"]::before,
+[class^="matxi-"]::after,
+[class*="matxi-"]::after {
+  font-family: MaterializeX Media Icons;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "liga";
+}
+
+.icon-container > .icon-preview > [class^="matxi-"]::before,
+.icon-container > .icon-preview > [class*="matxi-"]::before,
+.icon-container > .icon-preview > [class^="matxi-"]::after,
+.icon-container > .icon-preview > [class*="matxi-"]::after {
+  margin-bottom: 0 !important;
+  font-size: 1em;
+}
+
+.matxi-sound-bars::before {
+  content: "\f100";
+}
+
+.matxi-sound-frequency::before {
+  content: "\f101";
+}
+
+.matxi-direction::before {
+  content: "\f102";
+}
+
+.matxi-direction-1::before {
+  content: "\f103";
+}
+
+.matxi-speaker-4::before {
+  content: "\f104";
+}
+
+.matxi-speaker-3::before {
+  content: "\f105";
+}
+
+.matxi-speaker-2::before {
+  content: "\f106";
+}
+
+.matxi-speaker-1::before {
+  content: "\f107";
+}
+
+.matxi-speaker::before {
+  content: "\f108";
+}
+
+.matxi-pause-two-lines::before {
+  content: "\f109";
+}
+
+.matxi-black::before {
+  content: "\f10a";
+}
+
+.matxi-arrow::before {
+  content: "\f10b";
+}
+
+.matxi-rewind::before {
+  content: "\f10c";
+}
+
+.matxi-fast-forward::before {
+  content: "\f10d";
+}
+
+.matxi-arrow-2::before {
+  content: "\f10e";
+}
+
+.matxi-arrow-1::before {
+  content: "\f10f";
+}
+
+.matxi-symbols::before {
+  content: "\f110";
+}
+
+.matxi-arrows::before {
+  content: "\f111";
+}
+
+.matxi-web-1::before {
+  content: "\f112";
+}
+
+.matxi-web::before {
+  content: "\f113";
+}
+
+.matxi-app::before {
+  content: "\f114";
+}
+
+.matxi-squares::before {
+  content: "\f115";
+}

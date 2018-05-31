@@ -1,0 +1,22 @@
+{
+  "entry": {
+    "main": [
+      "./scripts/main.js",
+      "./styles/main.scss"
+    ],
+    "admin": [
+      "./scripts/admin.js",
+      "./styles/admin.scss"
+    ],
+    "customizer": [
+      "./scripts/customizer.js"
+    ]
+  },
+  "publicPath": "/app/themes/matx",
+  "devUrl": "http://192.168.0.3:8085",
+  "proxyUrl": "http://192.168.0.3:8086",
+  "cacheBusting": "[name]_[hash:8]",
+  "watch": [
+    "{app,resources/views}/**/*.php"
+  ]
+}
