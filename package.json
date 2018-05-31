@@ -1,10 +1,9 @@
 {
   "name": "materializex",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "author": "Dom Noble <dom@domnoble.com>",
   "description": "A Wordpress theme based on roots sage implementing materializecss, three.js, video.js and a few custom scripts",
   "homepage": "https://domnoble.com/",
-  "private": true,
   "repository": {
     "type": "git",
     "url": "git://github.com/domnoble/materializex.git"

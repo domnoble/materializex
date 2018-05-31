@@ -1,31 +1,18 @@
-# [Sage](https://roots.io/sage/)
-[![Packagist](https://img.shields.io/packagist/vpre/roots/sage.svg?style=flat-square)](https://packagist.org/packages/roots/sage)
-[![devDependency Status](https://img.shields.io/david/dev/roots/sage.svg?style=flat-square)](https://david-dm.org/roots/sage#info=devDependencies)
-[![Build Status](https://img.shields.io/travis/roots/sage.svg?style=flat-square)](https://travis-ci.org/roots/sage)
-
-Sage is a WordPress starter theme with a modern development workflow.
-
-**Sage 9 is in active development and is currently in beta. The `master` branch tracks Sage 9 development. If you want a stable version, use the [latest Sage 8 release](https://github.com/roots/sage/releases/latest).**
+# [MaterializeX](https://domnoble.com)
+MaterializeX is a WordPress theme based on Sage from roots.io, implementing three.js, video.js, prism, materializecss and a some custom scripts. Also included are admin menus for changing classes and modifying sass variables from within wordpress, for rapid styling.
 
 ## Features
-
 * Sass for stylesheets
 * ES6 for JavaScript
 * [Webpack](https://webpack.github.io/) for compiling assets, optimizing images, and concatenating and minifying files
 * [Browsersync](http://www.browsersync.io/) for synchronized browser testing
 * [Laravel's Blade](https://laravel.com/docs/5.3/blade) as a templating engine
-* CSS framework options:
-  * [Bootstrap 4](http://getbootstrap.com/)
-  * [Foundation](http://foundation.zurb.com/)
-  * [Tachyons](http://tachyons.io/)
-  * None (blank slate)
-* Font Awesome (optional)
-
-See a working example at [roots-example-project.com](https://roots-example-project.com/).
-
-### Recommended extensions
-
-* [Controller](https://github.com/soberwp/controller) — WordPress plugin to enable a basic controller when using Blade with Sage 9
+* CSS framework:
+  * [materializecss](https://materializecss.com/)
+* JS frameworks:
+  * [three.js](https://threejs.org/)
+  * [video.js](http://videojs.com/)
+  * [prism.js](https://prismjs.com/)
 
 ## Requirements
 
@@ -37,32 +24,28 @@ Make sure all dependencies have been installed before moving on:
 * [Node.js](http://nodejs.org/) >= 6.9.x
 * [Yarn](https://yarnpkg.com/en/docs/install)
 
-## Theme installation
+Alternatively there is also a docker container available which will setup wordpress with persistance, however you will still need to have all the dependencies bar wordpress installed on the host
 
-Install Sage using Composer from your WordPress themes directory (replace `your-theme-name` below with the name of your theme):
-
-```shell
-# @ app/themes/ or wp-content/themes/
-$ composer create-project roots/sage your-theme-name dev-master
-```
-
-During theme installation you will have the options to:
-
-* Update theme headers (theme name, description, author, etc.)
-* Select a CSS framework (Bootstrap, Foundation, Tachyons, none)
-* Add Font Awesome
-* Configure Browsersync (path to theme, local development URL)
+* [Wordpress Docker](https://github.com/domnoble/docker-wordpress/)
 
 ## Theme structure
 
 ```shell
-themes/your-theme-name/   # → Root of your Sage based theme
+themes/matx/              # → Root of theme
 ├── app/                  # → Theme PHP
 │   ├── lib/Sage/         # → Blade implementation, asset manifest
-│   ├── admin.php         # → Theme customizer setup
+│   ├── breadcrumbs.php   # → Breadcrumbs functions
+│   ├── comment_form.php  # → Comment form functions
+│   ├── comment_list.php  # → Comment list functions
+│   ├── customizer.php    # → Theme customizer setup
 │   ├── filters.php       # → Theme filters
 │   ├── helpers.php       # → Helper functions
-│   └── setup.php         # → Theme setup
+│   ├── navigation.php    # → Navigation walker
+│   ├── options.php       # → Admin options controllers
+│   ├── pagination.php    # → Pagination functions
+│   ├── post_types.php    # → 3D model post type functions
+│   ├── setup.php         # → Theme setup
+│   └── tags.php          # → Tag cloud functions
 ├── composer.json         # → Autoloading for `app/` files
 ├── composer.lock         # → Composer lock file (never edit)
 ├── dist/                 # → Built theme assets (never edit)
@@ -90,35 +73,19 @@ themes/your-theme-name/   # → Root of your Sage based theme
 
 Edit `app/setup.php` to enable or disable theme features, setup navigation menus, post thumbnail sizes, and sidebars.
 
-## Theme development
+* `composer install` — Intall php assets
+* `npm install` — Install JavaScript assets
 
-* Run `yarn` from the theme directory to install dependencies
-* Update `resources/assets/config.json` settings:
-  * `devUrl` should reflect your local development hostname
-  * `publicPath` should reflect your WordPress folder structure (`/wp-content/themes/sage` for non-[Bedrock](https://roots.io/bedrock/) installs)
+Alternatively you can use yarn to install assets...
+
+* `yarn install` — Install JavaScript assets with yarn
+
+### Development
+
+The theme container itself builds without composer or node installed, in order to run
 
 ### Build commands
 
 * `yarn run start` — Compile assets when file changes are made, start Browsersync session
 * `yarn run build` — Compile and optimize the files in your assets directory
 * `yarn run build:production` — Compile assets for production
-
-## Documentation
-
-Sage 8 documentation is available at [https://roots.io/sage/docs/](https://roots.io/sage/docs/).
-
-Sage 9 documentation is currently in progress and can be viewed at [https://github.com/roots/docs/tree/sage-9/sage](https://github.com/roots/docs/tree/sage-9/sage).
-
-## Contributing
-
-Contributions are welcome from everyone. We have [contributing guidelines](https://github.com/roots/guidelines/blob/master/CONTRIBUTING.md) to help you get started.
-
-## Community
-
-Keep track of development and community news.
-
-* Participate on the [Roots Discourse](https://discourse.roots.io/)
-* Follow [@rootswp on Twitter](https://twitter.com/rootswp)
-* Read and subscribe to the [Roots Blog](https://roots.io/blog/)
-* Subscribe to the [Roots Newsletter](https://roots.io/subscribe/)
-* Listen to the [Roots Radio podcast](https://roots.io/podcast/)
